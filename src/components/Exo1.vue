@@ -5,7 +5,7 @@ const TITLE = 'EXO 1';
 
 // Configuration
 const counter = ref(0);
-const solde = ref(1500);
+const solde = ref(15000);
 
 let message = ref('');
 
@@ -47,29 +47,50 @@ onMounted(() => {
       </li>
     </ul>
 
-    <button @click="retrait(10)">10€</button> &nbsp;
-    <button @click="retrait(20)">20€</button> &nbsp;
-    <button @click="retrait(40)">40€</button> &nbsp;
-    <button @click="retrait(50)">50€</button> &nbsp;
-    <button @click="retrait(60)">60€</button> &nbsp;
-    <button @click="retrait(80)">80€</button> &nbsp;
-    <button @click="retrait(100)">100€</button> &nbsp;
+    <section class="container__btn">
+      <button @click="retrait(10)">10€</button> &nbsp;
+      <button @click="retrait(20)">20€</button> &nbsp;
+      <button @click="retrait(40)">40€</button> &nbsp;
+      <button @click="retrait(50)">50€</button> &nbsp;
+      <button @click="retrait(60)">60€</button> &nbsp;
+      <button @click="retrait(80)">80€</button> &nbsp;
+      <button @click="retrait(100)">100€</button> &nbsp;
+    </section>
 
     <p>{{ message }}</p>
   </fieldset>
 </template>
 
-<style>
+<style scoped lang="scss">
 fieldset {
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
-  max-width: calc(max-content + 20px);
+  padding: 20px;
+  max-width: 450px;
   margin: 20px auto;
+
+  legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+  section {
+    &.container__btn {
+      width: 100% -20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
 }
-legend {
-  font-size: calc(1em + 1vw);
-  font-weight: bold;
-  padding: 0 10px;
+
+button {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 2.5px 10px;
+  cursor: pointer;
 }
 </style>
