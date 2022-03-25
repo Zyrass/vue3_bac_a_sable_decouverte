@@ -12,7 +12,7 @@
     </ul>
 
     <section class="container__btn">
-      <button @click="retrait(10)">10€</button> &nbsp;
+      <button @mouseenter="retrait(10)">10€</button> &nbsp;
       <button @click="retrait(20)">20€</button> &nbsp;
       <button @click="retrait(40)">40€</button> &nbsp;
       <button @click="retrait(50)">50€</button> &nbsp;
@@ -31,8 +31,8 @@ import { ref, onMounted } from 'vue';
 const TITLE = 'EXO 1';
 
 // Configuration
-const counter = ref(0);
-const solde = ref(1000);
+const counter = ref(100);
+const solde = ref(5000);
 const operation = ref([]);
 
 let message = ref('');
