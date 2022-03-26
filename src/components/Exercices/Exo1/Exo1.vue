@@ -4,7 +4,7 @@
     <p>{{ state.description }}</p>
 
     <fieldset>
-      <legend>SOLDE : {{ solde }}</legend>
+      <legend>SOLDE : {{ solde }} €</legend>
 
       <h2>Choisissez le montant désiré</h2>
 
@@ -82,6 +82,7 @@ section {
   &.child {
     padding: 20px 40px;
     background-color: mediumseagreen;
+    height: 100%;
 
     fieldset {
       position: relative;

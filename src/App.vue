@@ -12,7 +12,7 @@
           <optgroup label="Bascule sur un quelconque exercice">
             <option selected value="null">voir la liste</option>
             <option value="exo1">Exercice 1 : ref + onMounted</option>
-            <option value="exo2">Exercice 2 : ref + reactive + computed</option>
+            <option value="exo2">Exercice 2 : reactive + computed</option>
           </optgroup>
         </select>
       </fieldset>
@@ -51,6 +51,7 @@ const choix = ref('null');
 
 <style lang="scss">
 body {
+  overflow: hidden;
   margin: 0;
   background-color: #444;
   color: #fff;
@@ -73,10 +74,12 @@ body {
         'exos';
 
       section {
+        width:70vw;
+        max-width:95%;
+        margin: 0 auto;
         &.selected {
           fieldset {
             grid-area: selected;
-            max-width: 65%;
             margin: 50px auto;
             padding: 0 25px 25px;
             border: 1px solid #ccc;
@@ -96,7 +99,7 @@ body {
 
             select {
               grid-area: select;
-              width: 100%;
+              width: 80%;
               border: 1px solid #ccc;
               border-radius: 3px;
               padding: 10px;
@@ -124,7 +127,6 @@ body {
 }
 
 fieldset {
-  max-width: 80%;
   margin: 20px auto;
   text-align: center;
 }
