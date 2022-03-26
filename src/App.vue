@@ -10,7 +10,7 @@
         </p>
         <select name="exo" id="exo" v-model="choix">
           <optgroup label="Bascule sur un quelconque exercice">
-            <option value="" selected>...</option>
+            <option selected value="null">voir la liste</option>
             <option value="exo1">Exercice 1 : ref + onMounted</option>
             <option value="exo2">Exercice 2 : ref + reactive + computed</option>
           </optgroup>
@@ -19,7 +19,12 @@
     </section>
 
     <section class="exos">
-      <template v-if="choix === 'exo1'">
+      <template v-if="choix === 'null'">
+        <fieldset>
+          <p>Aucun exercice sélectionné</p>
+        </fieldset> 
+      </template>
+      <template v-else-if="choix === 'exo1'">
         <Exo1 />
       </template>
       <template v-else-if="choix == 'exo2'">
@@ -41,7 +46,7 @@ import Exo1 from './components/Exercices/Exo1/Exo1.vue';
 import Reactive from './components/Exercices/Exo2/Reactive.vue';
 
 // Logique
-const choix = ref('exo1');
+const choix = ref('null');
 </script>
 
 <style lang="scss">
@@ -116,5 +121,11 @@ body {
       }
     }
   }
+}
+
+fieldset {
+  max-width: 80%;
+  margin: 20px auto;
+  text-align: center;
 }
 </style>
