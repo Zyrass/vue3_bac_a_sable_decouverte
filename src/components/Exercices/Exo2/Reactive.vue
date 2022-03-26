@@ -64,7 +64,7 @@ setTimeout(() => {
 }, 2000);
 </script>
 
-<style>
+<style scoped>
 fieldset {
   border: 1px solid #ccc;
   padding: 0 20px 20px;
