@@ -47,12 +47,12 @@ npm run lint
 
 ## Accueil
 
-![Logo](https://github.com/Zyrass/vue3_bac_a_sable/blob/master/images/home.png?raw=true)
+![Logo](https://github.com/Zyrass/vue3_bac_a_sable_decouverte/blob/master/images/home.png?raw=true)
 
 ## Exo1
 
-![Logo](https://github.com/Zyrass/vue3_bac_a_sable/blob/master/images/exo1.png?raw=true)
+![Logo](https://github.com/Zyrass/vue3_bac_a_sable_decouverte/blob/master/images/exo1.png?raw=true)
 
 ## Exo2
 
-![Logo](https://github.com/Zyrass/vue3_bac_a_sable/blob/master/images/exo2.png?raw=true)
+![Logo](https://github.com/Zyrass/vue3_bac_a_sable_decouverte/blob/master/images/exo2.png?raw=true)
